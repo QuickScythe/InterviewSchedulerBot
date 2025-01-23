@@ -19,7 +19,7 @@ public class AcceptCommand extends InterviewSubcommand {
         // - Send a message to the interviewers
         // - Set the interviewee's role to Squire
         interviewee.openPrivateChannel().queue((privateChannel) -> {
-            privateChannel.sendMessage("Congratulations! You have been accepted into the guild!").queue();
+            privateChannel.sendMessage("Congratulations! You have been accepted!").queue();
         });
         channel.getGuild().addRoleToMember(interviewee, Utils.INTERVIEW_ACCEPTED_ROLE(channel.getGuild())).queue();
         channel.delete().queue();

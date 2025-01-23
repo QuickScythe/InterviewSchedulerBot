@@ -13,6 +13,6 @@ public class DenyCommand extends InterviewSubcommand {
 
     @Override
     public void run(TextChannel channel, User interviewee) {
-
+        channel.sendMessage("Hello again " + interviewee.getAsMention() + ". We regret to inform you that you did not pass your interview. This is always a bummer, but you'll be able to apply again after the upcoming event.");
     }
 }

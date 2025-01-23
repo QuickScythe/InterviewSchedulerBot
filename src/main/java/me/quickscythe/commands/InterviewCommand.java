@@ -53,7 +53,7 @@ public class InterviewCommand extends DiscordCommand {
             }
             channel.upsertPermissionOverride(guild.getMember(user)).grant(Permission.VIEW_CHANNEL).queue();
 
-            channel.sendMessage("Interview with " + user.getAsMention()).queue();
+            channel.sendMessage("Congratulations " + user.getAsMention() + "! Your application was good enough that we've accepted you into the interview stage of the process. Please provide your timezone and a list of available times so we can schedule that interview.").queue();
             event.reply("Interview started with " + user.getAsMention()).setEphemeral(true).queue();
 
         }
